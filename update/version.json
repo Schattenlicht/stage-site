@@ -1,7 +1,7 @@
 {
-  "version": "0.3.4",
-  "notes": "Lizenz freigeben (max. 2 pro Jahr), signierte Widerrufsliste",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.4.pack",
-  "sha256": "e982e704be658d54f3a969f4932a4bc1e1f9d5defe4c90c502061a0d09280991",
-  "sig": "eJgckbGt6otRiZ+bYoiqdT7RstMqpT2vK9Il3VNLB/Vc7SNdNunLc8TWjvwWP5Z26T5/IB1NkPhWf7fBefWUCw=="
+  "version": "0.3.5",
+  "notes": "Musik-Karte auf der Übersicht (abschaltbar)",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.5.pack",
+  "sha256": "fd6513aa4e81aa32e03736518f3421a64ed152acab4e56493e5ae4be7908515f",
+  "sig": "P10pREZEVBY2tH99h8nfUUwKwAiKxfj1nSRGd1XUdr+4MHkvt8jdBThQp7zjYLuAoAL/E1glUG5IkM/BhT5+DQ=="
 }
