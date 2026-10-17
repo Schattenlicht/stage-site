@@ -1,6 +1,6 @@
 {
  "format": 1,
- "stand": "2026-10-17T19:54:44Z",
+ "stand": "2026-10-17T20:56:09Z",
  "items": [
   {
    "id": "clean",
@@ -136,7 +136,22 @@
    "passt_zu": "",
    "vorschau": "vorschau/weihnacht-79abcd9e.webp",
    "vorschau_sha256": "79abcd9ed4aadad098051f26876670be9cddd4497ed4cbca37df54e79ac8cc4d"
+  },
+  {
+   "id": "sl-halloween",
+   "name": "Halloween",
+   "paket": "sl-halloween",
+   "status": "code",
+   "kurz": "Gruselig mit Leuchtrahmen",
+   "beschreibung": "Orange Leuchtrahmen, Fledermäuse, Funken, Bodennebel, Kürbis und ein kleiner Geist. Ein Design-Paket mit bewegten Ebenen für alle Overlays.",
+   "lizenz": "Einzellizenz für bis zu 2 Geräte, auch für Streams mit Einnahmen. Die Dateien dürfen nicht weitergegeben oder verkauft werden.",
+   "version": "1.0",
+   "preis_cent": null,
+   "kaufen_url": "",
+   "passt_zu": "",
+   "vorschau": "vorschau/sl-halloween-54f636e0.webp",
+   "vorschau_sha256": "54f636e04023b6d45e6df7680c2214f7ad0934f60454aed942a302d32752287f"
   }
  ],
- "sig": "HttEsGwn/aWQniX7KuSFz7RTCU0iJT3Ic6jJ1qyD/izTRKnRC67QxMyEQZo5OUIFd6U/iGQ26wI0SExJEgn9BA=="
+ "sig": "bB2QcE+E03M/R8CbXG8B6DldoKDbiCDhkyhkb2nJLiUekwKAgIg+Xr0kLb8LgYWrQmfr7UyV9HzfeMT/FgRnBA=="
 }
