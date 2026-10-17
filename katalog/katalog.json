@@ -1,6 +1,6 @@
 {
  "format": 1,
- "stand": "2026-10-17T20:56:09Z",
+ "stand": "2026-10-17T23:57:39Z",
  "items": [
   {
    "id": "clean",
@@ -111,13 +111,13 @@
    "id": "paintball",
    "name": "Paintball",
    "theme": "paintball",
-   "status": "frei",
+   "status": "code",
    "kurz": "Farbkleckse und Einschlag",
    "beschreibung": "Bunte Farbkleckse, die beim Alert einschlagen. Laut, bunt und verspielt.",
-   "lizenz": "Kostenlos und in Stage enthalten.",
+   "lizenz": "Einzellizenz für bis zu 2 Geräte, auch für Streams mit Einnahmen. Die Dateien dürfen nicht weitergegeben oder verkauft werden.",
    "version": "1.0",
-   "preis_cent": null,
-   "kaufen_url": "",
+   "preis_cent": 300,
+   "kaufen_url": "https://ko-fi.com/s/a4b376f5de",
    "passt_zu": "",
    "vorschau": "vorschau/paintball-b0ad0216.webp",
    "vorschau_sha256": "b0ad021685ab663e8673c16202032be560b327a76d1ddcf722f0debcd16ab381"
@@ -153,5 +153,5 @@
    "vorschau_sha256": "54f636e04023b6d45e6df7680c2214f7ad0934f60454aed942a302d32752287f"
   }
  ],
- "sig": "bB2QcE+E03M/R8CbXG8B6DldoKDbiCDhkyhkb2nJLiUekwKAgIg+Xr0kLb8LgYWrQmfr7UyV9HzfeMT/FgRnBA=="
+ "sig": "NFpdGQaCbi2szCxk9y6YCSsOWRii6LUs/WN9LBjKvDWQo5AAm44mo7vNHEbzrSa/1+j+373E5s82tbeOX4zSCA=="
 }
