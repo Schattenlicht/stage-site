@@ -1,7 +1,7 @@
 {
-  "version": "0.3.3",
-  "notes": "Neu: Design-Pakete können kostenlos oder mit Code angeboten werden (Einstellung im Admin).",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.3.pack",
-  "sha256": "79f9ec4ed832cf5de746ebc71ac1dda1c9a6a129c6ba8d67a4e0dcc0cfbedd32",
-  "sig": "dmS2rAUBGjsT0ZPlN1zphqRyiDGTuM6qm0glq6aSBOV8qRLXAuTF7Awk6WJZFxOFmNI6SLMw+Buz5TPUonEpBw=="
+  "version": "0.3.4",
+  "notes": "Lizenz freigeben (max. 2 pro Jahr), signierte Widerrufsliste",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.4.pack",
+  "sha256": "e982e704be658d54f3a969f4932a4bc1e1f9d5defe4c90c502061a0d09280991",
+  "sig": "eJgckbGt6otRiZ+bYoiqdT7RstMqpT2vK9Il3VNLB/Vc7SNdNunLc8TWjvwWP5Z26T5/IB1NkPhWf7fBefWUCw=="
 }
