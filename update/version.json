@@ -1,7 +1,7 @@
 {
-  "version": "0.3.2",
-  "notes": "Neu: Lizenzierte Design-Pakete lädt und aktualisiert Stage selbst (im Katalog).",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.2.pack",
-  "sha256": "268bc17639d239120543121a7f2c34ec461800b587128dfe5515ba77972d3201",
-  "sig": "RBzaoAKWmpcy5RoSgvFvuXVjBNTeomDSReF3EM7PxqvJH4W39SzhkOFmoBHvz0UQS1tEmmoqBh/ZHr/Q9+xiCQ=="
+  "version": "0.3.3",
+  "notes": "Neu: Design-Pakete können kostenlos oder mit Code angeboten werden (Einstellung im Admin).",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.3.pack",
+  "sha256": "79f9ec4ed832cf5de746ebc71ac1dda1c9a6a129c6ba8d67a4e0dcc0cfbedd32",
+  "sig": "dmS2rAUBGjsT0ZPlN1zphqRyiDGTuM6qm0glq6aSBOV8qRLXAuTF7Awk6WJZFxOFmNI6SLMw+Buz5TPUonEpBw=="
 }
