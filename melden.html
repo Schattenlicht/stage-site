@@ -39,7 +39,7 @@
 </div>
 <script>
 (function () {
-  var ACCESS_KEY = '5b753b2d-4ff5-4afb-83ea-fdd5060d959e';   // öffentlicher Formular-Schlüssel (Web3Forms), kein Geheimnis
+  var ENDPOINT = 'https://og-schattenlicht.de/stage/stage-melden.php';
   var $ = function (id) { return document.getElementById(id); };
   var q = new URLSearchParams(location.search);
   if (q.get('v')) $('ver').value = String(q.get('v')).slice(0, 30);
@@ -51,17 +51,16 @@
     if ($('bot').value) return;                                   // Spam-Falle
     if (!$('what').value.trim()) { show('err', 'Bitte beschreibe kurz, was passiert ist.'); $('what').focus(); return; }
     if (!$('ok').checked) { show('err', 'Bitte bestätige die Datenschutzhinweise.'); return; }
-    if (ACCESS_KEY.indexOf('__') === 0) { show('err', 'Das Formular wird gerade eingerichtet. Bitte versuche es später noch einmal.'); return; }
     var body = [
       'Art: ' + $('kind').value, 'Version: ' + ($('ver').value || '-'), 'Browser: ' + navigator.userAgent.slice(0, 160), '',
       'Was ist passiert:', $('what').value.trim(), '',
       'Nachstellen:', $('steps').value.trim() || '-', '',
       'Diagnose:', $('diag').value.trim() || '-'
     ].join('\n');
-    var data = { access_key: ACCESS_KEY, subject: '[Stage ' + ($('ver').value || '?') + '] ' + $('kind').value, from_name: 'Stage-Formular', message: body, botcheck: '' };
+    var data = { subject: '[Stage ' + ($('ver').value || '?') + '] ' + $('kind').value, message: body, botcheck: '' };
     if ($('mail').value.trim()) data.email = $('mail').value.trim();
     $('go').disabled = true; show('ok', 'Wird gesendet …');
-    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+    fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (j) {
         if (j && j.success) { show('ok', 'Danke! Deine Meldung ist angekommen.'); $('f').reset(); if (q.get('v')) $('ver').value = String(q.get('v')).slice(0, 30); }
