@@ -1,7 +1,7 @@
 {
-  "version": "0.2.5",
-  "notes": "Das X beendet Stage jetzt komplett; der Knopf Beenden entfällt.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.5.pack",
-  "sha256": "6f2cfe8b1bf8748fb665360e41c7385f18a93e327ef8f4d5aa6475adc8711937",
-  "sig": "w0LgUw5+L5/z46MHQFwLEqmdLGjm//aiOVEtW3rtXN6nwSy/19i5RN1Xz12ilcDHuuJwvDj/DBss3LyPp3pYBg=="
+  "version": "0.2.6",
+  "notes": "Bereich TikTok-Verbindung für alle sichtbar, Auswahl Verbindungsart entfällt.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.6.pack",
+  "sha256": "109263b62b7b6a1b1792bb3a2f1856adb6e6dc8aaf64c9709ea00c21f4397280",
+  "sig": "oPrU7VY+X6md557bVoWInu2Wml7l6NcriYUcM7IG7JZMlmAEgowW5H+h2HakNhEAXXUeHLU4VmV2JRyDf3LJDA=="
 }
