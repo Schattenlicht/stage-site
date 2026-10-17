@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz im Programm – Schattenlicht Stage</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/page.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><span>ᛟ</span>Schattenlicht Stage</a></header>
+<h1>Datenschutz im Programm</h1>
+<p class="sub">Stand: Oktober 2026 · Gilt für das Programm „Schattenlicht Stage“ (Version 0.2.x). Für diese Webseite, die Betatester-Anmeldung und das Fehlerformular gelten die <a href="datenschutz.html">Datenschutzhinweise zur Webseite</a>.</p>
+
+<h2>Das Wichtigste in Kürze</h2>
+<p>Stage läuft auf deinem eigenen PC. Ich (der Entwickler) bekomme aus dem Programm <strong>keine</strong> Daten von dir und von deinen Zuschauern. Es gibt keine Nutzerkonten, keine Statistik, kein Tracking und keine Werbung. Die einzige Verbindung zu mir ist die Update-Abfrage (siehe unten), und die kannst du ausschalten.</p>
+
+<h2>Verantwortlicher</h2>
+<p>Für die Update-Abfrage und für Meldungen, die du mir selbst schickst, ist OG Schattenlicht (Oliver Gabriel) verantwortlich. Die Anschrift und Kontaktangaben stehen im <a href="https://og-schattenlicht.de/impressum">Impressum</a>. Für alles, was Stage auf deinem PC speichert und verarbeitet (insbesondere Daten deiner Zuschauer), bist du selbst verantwortlich, weil du das Programm betreibst. Ich habe darauf keinen Zugriff.</p>
+
+<h2>Was Stage auf deinem PC speichert</h2>
+<p>Alles liegt im Installationsordner von Stage (normalerweise <code>%LocalAppData%\Programs\Schattenlicht Stage</code>). Dort werden gespeichert:</p>
+<ul>
+<li><strong>Einstellungen</strong> (<code>config.json</code>): deine Wahl bei Look, Alerts, Zielen, Sounds und Ähnlichem, dein TikTok-Benutzername und, falls du sie einträgst, ein Euler-Stream-Schlüssel, das Streamer.bot-Passwort und die Spotify-Client-ID samt Anmelde-Token. Diese Angaben bleiben auf deinem PC und gehen nicht an das Dashboard oder die Overlays.</li>
+<li><strong>Zuschauerdaten</strong> (Ordner <code>data</code>): öffentliche TikTok-Benutzernamen und Anzeigenamen von Zuschauern, die in deinem LIVE aktiv waren, mit Punkten, Coins, Rang, Zahl der Besuche sowie Zeitpunkt des ersten und letzten Besuchs. Sie werden für Begrüßungen, Ränge und Bestenlisten gebraucht.</li>
+<li><strong>Ereignisse im Programm</strong>: Geschenke, Follows, Shares und ähnliche Ereignisse werden angezeigt und an deine Overlays und, wenn du es eingeschaltet hast, an Streamer.bot weitergegeben. Gespeichert werden sie nur im oben genannten Umfang.</li>
+<li><strong>Protokolldatei</strong> (<code>data/stage.log</code>): technische Meldungen und Fehler zur Fehlersuche. Ab 1 MB wird sie ersetzt, sie bleibt also klein.</li>
+<li><strong>Eigene Bilder und Töne</strong> für Alerts (Ordner <code>media</code> und <code>sounds</code>).</li>
+</ul>
+<p>Zum Löschen kannst du im Ordner <code>data</code> die Zuschauerdaten entfernen oder Stage deinstallieren und den Ordner löschen. Die Zuschauerdaten verlassen deinen PC nicht.</p>
+
+<h2>Hinweis für dich als Streamer</h2>
+<p>Die Namen deiner Zuschauer sind personenbezogene Daten. Da du Stage in deinem LIVE einsetzt, solltest du in deiner eigenen Datenschutzerklärung oder im Impressum deines Kanals erwähnen, dass du Zuschauernamen für Begrüßungen, Ränge und Bestenlisten verarbeitest. Wenn du das Overlay öffentlich auf Stream zeigst, sehen alle Zuschauer diese Namen.</p>
+
+<h2>Verbindungen nach außen</h2>
+<p>Stage verbindet sich nur in den folgenden Fällen mit dem Internet:</p>
+<ul>
+<li><strong>TikTok LIVE:</strong> Um Ereignisse aus deinem LIVE zu empfangen (Chat, Geschenke, Follower und mehr), verbindet sich Stage mit TikTok. Dabei kann TikTok deine IP-Adresse und den eingegebenen Benutzernamen sehen. Es gilt die Datenschutzerklärung von TikTok. Stage meldet sich dafür <em>nicht</em> bei deinem TikTok-Konto an und sendet keine Chatnachrichten.</li>
+<li><strong>Browser-Modus (nur wenn du ihn wählst):</strong> Dann lädt Stage deine öffentliche LIVE-Seite auf tiktok.com in einem eingebetteten Browser, wie ein normaler Seitenaufruf. Es gilt die Datenschutzerklärung von TikTok.</li>
+<li><strong>Euler Stream (Signaturdienst):</strong> Für die Verbindung zu TikTok LIVE nutzt Stage eine Open-Source-Bibliothek, die einen Signaturdienst von Euler Stream (eulerstream.com) abfragt. Dabei können deine IP-Adresse und technische Verbindungsdaten zu Euler Stream gelangen. Wenn du einen eigenen Euler-Schlüssel einträgst (optional), wird er dabei mitgeschickt. Es gilt die Datenschutzerklärung von Euler Stream.</li>
+<li><strong>Spotify (nur wenn du es einrichtest):</strong> Für die Anzeige des laufenden Titels kannst du Stage mit deinem Spotify-Konto verbinden. Dann kommuniziert Stage direkt mit Spotify, dort gilt deren Datenschutzerklärung. Ohne diese Einrichtung findet keine Verbindung statt.</li>
+<li><strong>Streamer.bot (nur wenn du es einschaltest):</strong> Die Verbindung zu Streamer.bot läuft auf deinem eigenen PC (Adresse 127.0.0.1) und verlässt ihn nicht.</li>
+<li><strong>Update-Abfrage:</strong> Siehe nächster Abschnitt.</li>
+</ul>
+<p>Das Dashboard und die Overlays laufen auf einem Server, der nur auf deinem eigenen PC erreichbar ist. Von außen kommt niemand an Stage heran, und Änderungen im Dashboard sind zusätzlich durch ein Sitzungs-Token geschützt.</p>
+
+<h2>Update-Abfrage</h2>
+<p>Stage fragt in regelmäßigen Abständen die Datei <code>update/version.json</code> auf stage.og-schattenlicht.de ab, um neue Versionen zu finden. Die Seite wird über GitHub Pages (GitHub Inc., USA) ausgeliefert. Dabei sieht GitHub technisch bedingt deine IP-Adresse. Ich selbst bekomme davon nichts mit und speichere nichts. Es werden keine weiteren Daten von Stage gesendet. Ein heruntergeladenes Update wird vor der Installation anhand einer digitalen Signatur geprüft. Rechtsgrundlage ist mein berechtigtes Interesse, dir sichere Updates anzubieten (Art. 6 Abs. 1 lit. f DSGVO). Du kannst die Abfrage in den Einstellungen von Stage ausschalten.</p>
+
+<h2>Fehler melden</h2>
+<p>Die Funktion „Fehler melden“ kopiert eine kurze Diagnose (Version, Windows-Version, letzte Fehler, ohne TikTok-Namen) in die Zwischenablage und öffnet das Meldeformular auf dieser Webseite. Es wird nichts automatisch gesendet. Erst wenn du das Formular selbst abschickst, gelten die <a href="datenschutz.html">Datenschutzhinweise zur Webseite</a>.</p>
+
+<h2>Keine Weitergabe, kein Tracking</h2>
+<p>Stage enthält keine Analyse- oder Werbewerkzeuge, setzt keine Cookies zu Werbezwecken und gibt keine Daten an mich oder Dritte weiter, außer in den oben genannten Fällen.</p>
+
+<h2>Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch, soweit ich Daten von dir verarbeite. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuschauer, die Auskunft oder Löschung ihrer Daten wünschen, wenden sich bitte an den jeweiligen Streamer, der Stage betreibt.</p>
+
+<footer><a href="./">← Zur Startseite</a> · <a href="datenschutz.html">Datenschutz Webseite</a> · <a href="melden.html">Fehler melden</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></footer>
+</div>
+</body>
+</html>
