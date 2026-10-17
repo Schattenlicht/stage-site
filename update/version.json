@@ -1,7 +1,7 @@
 {
-  "version": "0.2.9",
-  "notes": "Neu: Design-Pakete (ZIP-Import mit Farben, Schrift, Bild- und Videoebenen). Verbessert: Speichern unter Windows wiederholt sich bei kurz gesperrten Dateien; Stil-Liste auch ohne Internet.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.9.pack",
-  "sha256": "9c6519e360fd27c2b26ba5805935bd2064cf56c4b2978e6e8fc554d6095acd2c",
-  "sig": "E42qnfnxiY5sWYNlfe53wJMZusJZJQw7YCKYmScxcuzv8aPQgbIHMMNejaB7mJ3uPgtPSpJjx9XXjfNIjjRsBQ=="
+  "version": "0.3.0",
+  "notes": "Neu: „Stile entdecken“ (Katalog mit Vorschau, Beschreibung, Version, Preis und Lizenztext) und der Schalter „Online-Funktionen“ in den Einstellungen. Der Katalog funktioniert auch ohne Internet mit dem zuletzt geladenen Stand.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.0.pack",
+  "sha256": "8d4e597f99a3525fe797f9f387c2af0280e6cb825af9b9e43291b4b297da2c19",
+  "sig": "9TaDndNW0131KQQ8yXe9iu1pGOAbrZfKX0N4CReEkymRMFGTeFXXWFWFZCMtIlgjHrES04jx/QN6JSLNPX+eCQ=="
 }
