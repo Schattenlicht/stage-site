@@ -1,7 +1,7 @@
 {
-  "version": "0.2.3",
-  "notes": "Sicherheit: Sitzungs-Token für die lokale Schnittstelle, strengere Pfadprüfung im Installer, sichtbarer Fokus bei Schaltern.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.3.pack",
-  "sha256": "5957e7981207d971a1d66cfc0fb53847f517420edd670be980ae4e83c8c000a4",
-  "sig": "bKIzuvyUyqzHwjEH37hk//Ge48zuRwQ+BXINPV42S33FmsORkNBSgeaLu8UFp4AyVafcZKWXuF/KLjAz2ZxOAg=="
+  "version": "0.2.4",
+  "notes": "Eigene Dateien begrenzt (120 Bilder, 60 Töne, sichere Dateinamen); Atmosphäre schont den Rechner.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.4.pack",
+  "sha256": "2ee110028d0aecf82544ad9bda41870058dfefcaf0da49f79ccf0a3acab07d7f",
+  "sig": "+sR0+I03sdeBL/Ami+yu7Rmm+MviNj7K3WjFDVvMg1BFTrBZsxv8ICDWQvUBQpYGxs16C5x0oW3dN1O2Dtj9Cg=="
 }
