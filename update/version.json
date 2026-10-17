@@ -1,7 +1,7 @@
 {
-  "version": "0.3.1",
-  "notes": "Fehler behoben: eingelöste Codes gingen beim Neustart verloren. Neu: Lizenz für Design-Pakete, ein Code gilt für bis zu zwei Geräte.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.1.pack",
-  "sha256": "6190410b75b17f798103c87fdb7f19e20f6390481bd86d9c710fffab2c7b12d3",
-  "sig": "TADsS98NWy/c0KmXp00baWEL8P3a3sGWaG0xzXaRy2xfSIkTwTWvwsHXgCmrkd0lI7985bcjGE3N05uMPEzXDA=="
+  "version": "0.3.2",
+  "notes": "Neu: Lizenzierte Design-Pakete lädt und aktualisiert Stage selbst (im Katalog).",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.2.pack",
+  "sha256": "268bc17639d239120543121a7f2c34ec461800b587128dfe5515ba77972d3201",
+  "sig": "RBzaoAKWmpcy5RoSgvFvuXVjBNTeomDSReF3EM7PxqvJH4W39SzhkOFmoBHvz0UQS1tEmmoqBh/ZHr/Q9+xiCQ=="
 }
