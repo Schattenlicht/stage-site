@@ -26,6 +26,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .cta:hover{filter:brightness(1.06)}
 .meta{margin-top:14px;color:var(--mute);font-size:14px}
 .meta code{background:#0d1224;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:12.5px;word-break:break-all}
+details.sum{margin-top:8px}details.sum summary{cursor:pointer;color:var(--mute)}details.sum summary:hover{color:var(--text)}details.sum code{display:inline-block;margin-top:6px}
 .phones{display:flex;gap:14px;justify-content:center;align-items:flex-end}
 .phones img{width:31%;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.5);display:block}
 .phones img:nth-child(2){width:36%;transform:translateY(-14px)}
@@ -40,6 +41,7 @@ h2{font-size:28px;margin:0 0 8px;color:var(--gold)}
 ol.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
 ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 ol.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#1a1405;font-weight:700;display:grid;place-items:center}
+.support{text-align:center}.cta-soft{background:linear-gradient(180deg,#2a3560,#222b4d);color:var(--gold2);border:1px solid var(--gold);box-shadow:none}.cta-soft:hover{background:linear-gradient(180deg,#34406f,#2a3560)}
 .note{background:#17203a;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;color:#c3cce2;font-size:15.5px}
 footer{padding:34px 0 50px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
 footer p{margin:6px 0}
@@ -57,7 +59,8 @@ footer p{margin:6px 0}
   <h1>Dein LIVE.<br><em>Deine Bühne.</em></h1>
   <p class="lead">Schattenlicht Stage bringt Alerts, Ziele, Abstimmungen und Musik als Overlay im Hochformat in dein TikTok LIVE. Kostenlos, lokal auf deinem PC, ohne Konto.</p>
   <a class="cta" id="download" href="download/Setup-Schattenlicht-Stage.exe">⬇ Für Windows herunterladen</a>
-  <div class="meta">Version 0.2.0 · Windows 10/11 · 11 MB<br>SHA-256 des Installers: <code>e582bfac910b7315248ccb6cb1b45f3e66d1d3df1fa66f4ab29f2a368eb671d4</code></div>
+  <div class="meta">Version 0.2.0 · Windows 10/11 · 11 MB
+   <details class="sum"><summary>Prüfsumme anzeigen</summary>SHA-256 des Installers:<br><code>e582bfac910b7315248ccb6cb1b45f3e66d1d3df1fa66f4ab29f2a368eb671d4</code></details></div>
  </div>
  <div class="phones" aria-label="Beispiel-Looks">
   <img src="assets/arcade.jpg" alt="Look Arcade mit Geschenk-Alert" loading="lazy">
@@ -81,7 +84,7 @@ footer p{margin:6px 0}
 
 <section>
  <h2>Das Regiepult</h2>
- <p class="sub">Elemente links auswählen, in der Mitte verschieben, rechts einstellen.</p>
+ <p class="sub">Elemente links auswählen, in der Mitte verschieben, rechts einstellen: Form, Farben, Texte und Links.</p>
  <img class="shot" src="assets/dashboard.jpg" alt="Das Dashboard von Schattenlicht Stage" loading="lazy">
 </section>
 
@@ -95,7 +98,13 @@ footer p{margin:6px 0}
   <li><div><b>Testen und live gehen.</b> Mit dem Test-Center einen Alert ansehen. Sobald du live bist, verbindet sich Stage selbst.</div></li>
  </ol>
  <p></p>
- <div class="note"><b>Windows-Hinweis:</b> Neue Programme ohne Code-Signing-Zertifikat zeigen „Der Computer wurde durch Windows geschützt“. Dann auf „Weitere Informationen“ und „Trotzdem ausführen“ klicken. Du kannst die Datei vorher mit der SHA-256-Prüfsumme oben vergleichen.</div>
+ <div class="note"><b>Windows-Hinweis:</b> Neue Programme ohne Code-Signing-Zertifikat zeigen „Der Computer wurde durch Windows geschützt“. Dann auf „Weitere Informationen“ und „Trotzdem ausführen“ klicken. Du kannst die Datei vorher mit der SHA-256-Prüfsumme (unter dem Download-Knopf) vergleichen.</div>
+</section>
+
+<section class="support">
+ <h2>Gefällt dir Stage?</h2>
+ <p class="sub">Stage ist kostenlos und entsteht neben meinem Alltag. Wenn du magst, hilfst du mit einem Kaffee, dass es weitergeht.</p>
+ <a class="cta cta-soft" href="https://ko-fi.com/ogschattenlicht" target="_blank" rel="noopener">♥ Stage unterstützen (Ko-fi)</a>
 </section>
 
 <footer>
