@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betatester werden – Schattenlicht Stage</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/page.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><span>ᛟ</span>Schattenlicht Stage</a></header>
+<h1>Betatester werden</h1>
+<p class="sub">Schattenlicht Stage ist in der Beta. Ich gebe die App Schritt für Schritt an Testerinnen und Tester weiter. Trag dich ein, ich melde mich mit dem Download-Link per E-Mail. Das dauert meist ein bis zwei Tage.</p>
+
+<form id="f" novalidate style="margin-top:18px">
+ <div class="row2">
+  <label>Vorname<input id="vn" maxlength="60" autocomplete="given-name" required></label>
+  <label>Nachname<input id="nn" maxlength="60" autocomplete="family-name" required></label>
+ </div>
+ <label>E-Mail <small>(dorthin schicke ich den Link)</small><input id="mail" type="email" maxlength="120" autocomplete="email" required></label>
+ <label>TikTok-Name <small>(freiwillig)</small><input id="tt" maxlength="60" placeholder="@name"></label>
+ <label>Wofür möchtest du Stage nutzen? <small>(freiwillig)</small>
+  <textarea id="use" maxlength="1000" placeholder="Zum Beispiel: Musik-LIVEs, Spiele, Talk …"></textarea></label>
+ <div class="hp" aria-hidden="true"><label>Nicht ausfüllen<input id="bot" tabindex="-1" autocomplete="off"></label></div>
+ <label class="check"><input type="checkbox" id="ok" required><span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzhinweise</a> gelesen und bin einverstanden, dass du meine Angaben nutzt, um mir den Download-Link zu schicken und mich zur Beta zu kontaktieren.</span></label>
+ <div><button class="cta" id="go" type="submit">Als Betatester anmelden</button></div>
+ <div id="out" role="status" aria-live="polite"></div>
+</form>
+
+<footer><a href="./">← Zur Startseite</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></footer>
+</div>
+<script>
+(function () {
+  var ENDPOINT = 'https://og-schattenlicht.de/stage/stage-melden.php';
+  var $ = function (id) { return document.getElementById(id); };
+  var out = $('out');
+  function show(cls, text) { out.className = 'msg ' + cls; out.textContent = text; }
+  $('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if ($('bot').value) return;
+    var vn = $('vn').value.trim(), nn = $('nn').value.trim(), mail = $('mail').value.trim();
+    if (!vn || !nn) { show('err', 'Bitte trag Vor- und Nachnamen ein.'); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) { show('err', 'Bitte trag eine gültige E-Mail-Adresse ein.'); $('mail').focus(); return; }
+    if (!$('ok').checked) { show('err', 'Bitte bestätige die Datenschutzhinweise.'); return; }
+    var body = ['Betatester-Anmeldung', '', 'Name: ' + vn + ' ' + nn, 'E-Mail: ' + mail, 'TikTok: ' + ($('tt').value.trim() || '-'), '', 'Nutzung:', $('use').value.trim() || '-', '', 'Browser: ' + navigator.userAgent.slice(0, 160)].join('\n');
+    var data = { subject: '[Stage Beta] Anmeldung: ' + vn + ' ' + nn, message: body, email: mail, botcheck: '' };
+    $('go').disabled = true; show('ok', 'Wird gesendet …');
+    fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (j) {
+        if (j && j.success) { show('ok', 'Danke! Du bist angemeldet. Ich melde mich per E-Mail bei dir.'); $('f').reset(); }
+        else { show('err', 'Das hat leider nicht geklappt. Bitte versuche es später noch einmal.'); }
+      })
+      .catch(function () { show('err', 'Keine Verbindung. Bitte prüfe dein Internet und versuche es noch einmal.'); })
+      .then(function () { $('go').disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
