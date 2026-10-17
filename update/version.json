@@ -1,7 +1,7 @@
 {
-  "version": "0.2.8",
-  "notes": "Neu: Stile lassen sich per Server als frei oder mit Code festlegen; gesperrte Stile werden ausgegraut angezeigt.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.8.pack",
-  "sha256": "3cc8405bb709ff4d84ecc68199437bb593f3b6707c4f96d092ee9114a0ed77d1",
-  "sig": "Molq8yjbHMiGU14tbVATpypv3SFi8GwKicQjXsKRX8sleET0c+L23709GiwbcIeOVIe9AuzV7L+xQh4cnONrAw=="
+  "version": "0.2.9",
+  "notes": "Neu: Design-Pakete (ZIP-Import mit Farben, Schrift, Bild- und Videoebenen). Verbessert: Speichern unter Windows wiederholt sich bei kurz gesperrten Dateien; Stil-Liste auch ohne Internet.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.9.pack",
+  "sha256": "9c6519e360fd27c2b26ba5805935bd2064cf56c4b2978e6e8fc554d6095acd2c",
+  "sig": "E42qnfnxiY5sWYNlfe53wJMZusJZJQw7YCKYmScxcuzv8aPQgbIHMMNejaB7mJ3uPgtPSpJjx9XXjfNIjjRsBQ=="
 }
