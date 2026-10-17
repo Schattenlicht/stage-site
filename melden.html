@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fehler melden – Schattenlicht Stage</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/page.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><span>ᛟ</span>Schattenlicht Stage</a></header>
+<h1>Fehler oder Idee melden</h1>
+<p class="sub">Stage entsteht in Einzelarbeit, da rutscht mal ein Fehler durch. Danke, dass du ihn meldest. Schreib einfach auf, was passiert ist.</p>
+
+<div class="tip" id="diagTip">Kommst du aus dem Programm? Dort wurde eine <b>Diagnose</b> kopiert. Füge sie unten bei „Diagnose“ mit Strg+V ein. Sie enthält Version, Windows-Version und die letzten Fehlermeldungen, aber keinen TikTok-Namen.</div>
+
+<form id="f" novalidate style="margin-top:18px">
+ <label>Was möchtest du melden?
+  <select id="kind"><option>Fehler</option><option>Idee oder Wunsch</option><option>Frage</option></select></label>
+ <label>Was ist passiert? <small>Je genauer, desto schneller kann ich helfen.</small>
+  <textarea id="what" required maxlength="3000" placeholder="Zum Beispiel: Beim Klick auf „Stil wechseln“ passiert nichts."></textarea></label>
+ <label>Wie kann ich es nachstellen? <small>(freiwillig)</small>
+  <textarea id="steps" maxlength="2000" placeholder="1. … 2. … 3. …"></textarea></label>
+ <label>Diagnose <small>(freiwillig, kommt automatisch aus dem Programm: dort auf „Fehler melden“ klicken, hier einfügen)</small>
+  <textarea id="diag" class="diag" maxlength="5000" spellcheck="false"></textarea></label>
+ <div class="row2">
+  <label>Version <small>(wird automatisch gesetzt)</small><input id="ver" maxlength="30" placeholder="z. B. 0.2.0"></label>
+  <label>Deine E-Mail <small>(freiwillig, nur für Rückfragen)</small><input id="mail" type="email" maxlength="120" autocomplete="email"></label>
+ </div>
+ <div class="hp" aria-hidden="true"><label>Nicht ausfüllen<input id="bot" tabindex="-1" autocomplete="off"></label></div>
+ <label class="check"><input type="checkbox" id="ok" required><span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzhinweise</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung der Meldung verwendet werden.</span></label>
+ <div><button class="cta" id="go" type="submit">Meldung senden</button></div>
+ <div id="out" role="status" aria-live="polite"></div>
+</form>
+
+<footer><a href="./">← Zur Startseite</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></footer>
+</div>
+<script>
+(function () {
+  var ACCESS_KEY = '5b753b2d-4ff5-4afb-83ea-fdd5060d959e';   // öffentlicher Formular-Schlüssel (Web3Forms), kein Geheimnis
+  var $ = function (id) { return document.getElementById(id); };
+  var q = new URLSearchParams(location.search);
+  if (q.get('v')) $('ver').value = String(q.get('v')).slice(0, 30);
+  if (!q.get('v')) $('diagTip').hidden = true;
+  var out = $('out');
+  function show(cls, text) { out.className = 'msg ' + cls; out.textContent = text; }
+  $('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if ($('bot').value) return;                                   // Spam-Falle
+    if (!$('what').value.trim()) { show('err', 'Bitte beschreibe kurz, was passiert ist.'); $('what').focus(); return; }
+    if (!$('ok').checked) { show('err', 'Bitte bestätige die Datenschutzhinweise.'); return; }
+    if (ACCESS_KEY.indexOf('__') === 0) { show('err', 'Das Formular wird gerade eingerichtet. Bitte versuche es später noch einmal.'); return; }
+    var body = [
+      'Art: ' + $('kind').value, 'Version: ' + ($('ver').value || '-'), 'Browser: ' + navigator.userAgent.slice(0, 160), '',
+      'Was ist passiert:', $('what').value.trim(), '',
+      'Nachstellen:', $('steps').value.trim() || '-', '',
+      'Diagnose:', $('diag').value.trim() || '-'
+    ].join('\n');
+    var data = { access_key: ACCESS_KEY, subject: '[Stage ' + ($('ver').value || '?') + '] ' + $('kind').value, from_name: 'Stage-Formular', message: body, botcheck: '' };
+    if ($('mail').value.trim()) data.email = $('mail').value.trim();
+    $('go').disabled = true; show('ok', 'Wird gesendet …');
+    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (j) {
+        if (j && j.success) { show('ok', 'Danke! Deine Meldung ist angekommen.'); $('f').reset(); if (q.get('v')) $('ver').value = String(q.get('v')).slice(0, 30); }
+        else { show('err', 'Das hat leider nicht geklappt. Bitte versuche es später noch einmal.'); }
+      })
+      .catch(function () { show('err', 'Keine Verbindung. Bitte prüfe dein Internet und versuche es noch einmal.'); })
+      .then(function () { $('go').disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
