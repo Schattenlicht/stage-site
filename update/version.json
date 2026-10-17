@@ -1,7 +1,7 @@
 {
-  "version": "0.2.1",
-  "notes": "Neu: Fehler melden (Kopier-Knopf und Formular auf der Webseite), neues App-Symbol.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.1.pack",
-  "sha256": "983b13c492e7ab08b2e79d9fb48bbef933a69722ba34c3faed3cad859f0f9b19",
-  "sig": "l/YXd1049WdbBO6CnXa3Y2AsDD9MXP1L12Ak5ee3cTod9SoKZ/S95RhzYBWAZEkyqXOF97iNYfIZGGGGmGWTBg=="
+  "version": "0.2.2",
+  "notes": "Fehler melden ist jetzt ein auffälliger Knopf in der Seitenleiste.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.2.pack",
+  "sha256": "e94cbe9b76f1ded9a9bec31c755e8df2b5fa29ae300fe547538cedc8932af3d3",
+  "sig": "sBwXR3mgNZrZpTjFxeW90zRM7pMsyE6+F4NivYQRCLqb8IjMVBiy7sXtCFiRh+sFzJDLKTd8at/YW47uz+GHCQ=="
 }
