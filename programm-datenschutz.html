@@ -23,7 +23,7 @@
 <h2>Was Stage auf deinem PC speichert</h2>
 <p>Alles liegt im Installationsordner von Stage (normalerweise <code>%LocalAppData%\Programs\Schattenlicht Stage</code>). Dort werden gespeichert:</p>
 <ul>
-<li><strong>Einstellungen</strong> (<code>config.json</code>): deine Wahl bei Look, Alerts, Zielen, Sounds und Ähnlichem, dein TikTok-Benutzername und, falls du sie einträgst, ein Euler-Stream-Schlüssel, das Streamer.bot-Passwort und die Spotify-Client-ID samt Anmelde-Token. Diese Angaben bleiben auf deinem PC und gehen nicht an das Dashboard oder die Overlays.</li>
+<li><strong>Einstellungen</strong> (<code>config.json</code>): deine Wahl bei Look, Alerts, Zielen, Sounds und Ähnlichem, dein TikTok-Benutzername und, falls du sie einträgst, das Streamer.bot-Passwort und die Spotify-Client-ID samt Anmelde-Token. Diese Angaben bleiben auf deinem PC und gehen nicht an das Dashboard oder die Overlays.</li>
 <li><strong>Zuschauerdaten</strong> (Ordner <code>data</code>): öffentliche TikTok-Benutzernamen und Anzeigenamen von Zuschauern, die in deinem LIVE aktiv waren, mit Punkten, Coins, Rang, Zahl der Besuche sowie Zeitpunkt des ersten und letzten Besuchs. Sie werden für Begrüßungen, Ränge und Bestenlisten gebraucht.</li>
 <li><strong>Ereignisse im Programm</strong>: Geschenke, Follows, Shares und ähnliche Ereignisse werden angezeigt und an deine Overlays und, wenn du es eingeschaltet hast, an Streamer.bot weitergegeben. Gespeichert werden sie nur im oben genannten Umfang.</li>
 <li><strong>Protokolldatei</strong> (<code>data/stage.log</code>): technische Meldungen und Fehler zur Fehlersuche. Ab 1 MB wird sie ersetzt, sie bleibt also klein.</li>
@@ -37,9 +37,7 @@
 <h2>Verbindungen nach außen</h2>
 <p>Stage verbindet sich nur in den folgenden Fällen mit dem Internet:</p>
 <ul>
-<li><strong>TikTok LIVE:</strong> Um Ereignisse aus deinem LIVE zu empfangen (Chat, Geschenke, Follower und mehr), verbindet sich Stage mit TikTok. Dabei kann TikTok deine IP-Adresse und den eingegebenen Benutzernamen sehen. Es gilt die Datenschutzerklärung von TikTok. Stage meldet sich dafür <em>nicht</em> bei deinem TikTok-Konto an und sendet keine Chatnachrichten.</li>
-<li><strong>Browser-Modus (nur wenn du ihn wählst):</strong> Dann lädt Stage deine öffentliche LIVE-Seite auf tiktok.com in einem eingebetteten Browser, wie ein normaler Seitenaufruf. Es gilt die Datenschutzerklärung von TikTok.</li>
-<li><strong>Euler Stream (Signaturdienst):</strong> Für die Verbindung zu TikTok LIVE nutzt Stage eine Open-Source-Bibliothek, die einen Signaturdienst von Euler Stream (eulerstream.com) abfragt. Dabei können deine IP-Adresse und technische Verbindungsdaten zu Euler Stream gelangen. Wenn du einen eigenen Euler-Schlüssel einträgst (optional), wird er dabei mitgeschickt. Es gilt die Datenschutzerklärung von Euler Stream.</li>
+<li><strong>TikTok LIVE:</strong> Um Ereignisse aus deinem LIVE zu empfangen (Chat, Geschenke, Follower und mehr), lädt Stage deine öffentliche LIVE-Seite auf tiktok.com in einem eingebauten, unsichtbaren Fenster, ähnlich wie ein normaler Seitenaufruf. Dabei kann TikTok deine IP-Adresse, technische Daten und den eingegebenen Benutzernamen sehen. Es gilt die Datenschutzerklärung von TikTok. Stage meldet sich dafür <em>nicht</em> bei deinem TikTok-Konto an und sendet keine Chatnachrichten. Das Fenster nutzt ein eigenes Profil und hat nichts mit deinem normalen Browser zu tun. Ein Signatur-Dienst eines Drittanbieters wird in dieser Version nicht verwendet.</li>
 <li><strong>Spotify (nur wenn du es einrichtest):</strong> Für die Anzeige des laufenden Titels kannst du Stage mit deinem Spotify-Konto verbinden. Dann kommuniziert Stage direkt mit Spotify, dort gilt deren Datenschutzerklärung. Ohne diese Einrichtung findet keine Verbindung statt.</li>
 <li><strong>Streamer.bot (nur wenn du es einschaltest):</strong> Die Verbindung zu Streamer.bot läuft auf deinem eigenen PC (Adresse 127.0.0.1) und verlässt ihn nicht.</li>
 <li><strong>Update-Abfrage:</strong> Siehe nächster Abschnitt.</li>
@@ -60,7 +58,7 @@
 </ul>
 
 <h2>Sicherheit</h2>
-<p>Stage ist so gebaut, dass möglichst wenig nach außen geht: Der Server von Stage ist nur von deinem eigenen PC aus erreichbar, ändernde Aufrufe brauchen ein zufälliges Sitzungs-Token, das bei jedem Start neu entsteht, und Updates werden vor der Installation per Signatur geprüft. Dein Euler-Schlüssel, das Streamer.bot-Passwort und die Spotify-Anmeldung bleiben in der Konfigurationsdatei auf deinem PC. Sichere und teile diese Datei deshalb nicht. Ein absoluter Schutz ist trotzdem nicht möglich.</p>
+<p>Stage ist so gebaut, dass möglichst wenig nach außen geht: Der Server von Stage ist nur von deinem eigenen PC aus erreichbar, ändernde Aufrufe brauchen ein zufälliges Sitzungs-Token, das bei jedem Start neu entsteht, und Updates werden vor der Installation per Signatur geprüft. Das Streamer.bot-Passwort und die Spotify-Anmeldung bleiben in der Konfigurationsdatei auf deinem PC. Sichere und teile diese Datei deshalb nicht. Ein absoluter Schutz ist trotzdem nicht möglich.</p>
 
 <h2>Keine Weitergabe, kein Tracking</h2>
 <p>Stage enthält keine Analyse- oder Werbewerkzeuge, setzt keine Cookies zu Werbezwecken und gibt keine Daten an mich oder Dritte weiter, außer in den oben genannten Fällen.</p>
