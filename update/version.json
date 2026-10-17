@@ -1,7 +1,7 @@
 {
-  "version": "0.2.2",
-  "notes": "Fehler melden ist jetzt ein auffälliger Knopf in der Seitenleiste.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.2.pack",
-  "sha256": "e94cbe9b76f1ded9a9bec31c755e8df2b5fa29ae300fe547538cedc8932af3d3",
-  "sig": "sBwXR3mgNZrZpTjFxeW90zRM7pMsyE6+F4NivYQRCLqb8IjMVBiy7sXtCFiRh+sFzJDLKTd8at/YW47uz+GHCQ=="
+  "version": "0.2.3",
+  "notes": "Sicherheit: Sitzungs-Token für die lokale Schnittstelle, strengere Pfadprüfung im Installer, sichtbarer Fokus bei Schaltern.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.3.pack",
+  "sha256": "5957e7981207d971a1d66cfc0fb53847f517420edd670be980ae4e83c8c000a4",
+  "sig": "bKIzuvyUyqzHwjEH37hk//Ge48zuRwQ+BXINPV42S33FmsORkNBSgeaLu8UFp4AyVafcZKWXuF/KLjAz2ZxOAg=="
 }
