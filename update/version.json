@@ -1,7 +1,7 @@
 {
-  "version": "0.2.6",
-  "notes": "Bereich TikTok-Verbindung für alle sichtbar, Auswahl Verbindungsart entfällt.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.2.6.pack",
-  "sha256": "109263b62b7b6a1b1792bb3a2f1856adb6e6dc8aaf64c9709ea00c21f4397280",
-  "sig": "oPrU7VY+X6md557bVoWInu2Wml7l6NcriYUcM7IG7JZMlmAEgowW5H+h2HakNhEAXXUeHLU4VmV2JRyDf3LJDA=="
+  "version": "0.2.7",
+  "notes": "Neu: Freischaltcodes (jeder Code gilt für ein Gerät), Bereich Owner heißt jetzt Freischaltcodes.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.2.7.pack",
+  "sha256": "74f7c5f9bbe862183f679dff22e056f6f4c0b0a8a6cf76b43adf9749a7c26b10",
+  "sig": "kdaun+6iRItr0mQOH11/mp/I0c6HU+qO3hWdeLoZvPcCBf0HqNPpsTAkoYl71BJDJMgzl0sd3zVzF2Q7W0BcCA=="
 }
