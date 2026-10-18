@@ -1,7 +1,7 @@
 {
-  "version": "0.3.5",
-  "notes": "Musik-Karte auf der Übersicht (abschaltbar)",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.5.pack",
-  "sha256": "fd6513aa4e81aa32e03736518f3421a64ed152acab4e56493e5ae4be7908515f",
-  "sig": "P10pREZEVBY2tH99h8nfUUwKwAiKxfj1nSRGd1XUdr+4MHkvt8jdBThQp7zjYLuAoAL/E1glUG5IkM/BhT5+DQ=="
+  "version": "0.3.6",
+  "notes": "Kauf-Hinweis mit Häkchen vor dem Weg zu Ko-fi (Widerruf bei digitalen Inhalten).",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.6.pack",
+  "sha256": "cda9c8e244edd0e0deecd7fc671e6769987d7b5d3d10a6d88f0593ebfdc47954",
+  "sig": "7yjlZKeWTGRnMrUeZU7L9ViENmtUlrKFKxrZEsJN3QDzJ93zfEnQC4RTiwmNhb39lSQQZ0ogVg6IZxQ6crtrCQ=="
 }
