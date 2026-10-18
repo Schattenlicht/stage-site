@@ -1,6 +1,6 @@
 {
  "format": 1,
- "stand": "2026-10-17T23:57:39Z",
+ "stand": "2026-10-18T01:04:34Z",
  "items": [
   {
    "id": "clean",
@@ -116,7 +116,7 @@
    "beschreibung": "Bunte Farbkleckse, die beim Alert einschlagen. Laut, bunt und verspielt.",
    "lizenz": "Einzellizenz für bis zu 2 Geräte, auch für Streams mit Einnahmen. Die Dateien dürfen nicht weitergegeben oder verkauft werden.",
    "version": "1.0",
-   "preis_cent": 300,
+   "preis_cent": 200,
    "kaufen_url": "https://ko-fi.com/s/a4b376f5de",
    "passt_zu": "",
    "vorschau": "vorschau/paintball-b0ad0216.webp",
@@ -153,5 +153,5 @@
    "vorschau_sha256": "54f636e04023b6d45e6df7680c2214f7ad0934f60454aed942a302d32752287f"
   }
  ],
- "sig": "NFpdGQaCbi2szCxk9y6YCSsOWRii6LUs/WN9LBjKvDWQo5AAm44mo7vNHEbzrSa/1+j+373E5s82tbeOX4zSCA=="
+ "sig": "uEPSUJUWRICwNVVGjQ3P1FmU9IEWPRW/jR09F3FP4pjQqzJdEDe5N2+jqjnxkwL86b5wXDRLgsIPxx8w+JxxDg=="
 }
