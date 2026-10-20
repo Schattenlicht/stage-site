@@ -1,7 +1,7 @@
 {
-  "version": "0.3.6",
-  "notes": "Kauf-Hinweis mit Häkchen vor dem Weg zu Ko-fi (Widerruf bei digitalen Inhalten).",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.6.pack",
-  "sha256": "cda9c8e244edd0e0deecd7fc671e6769987d7b5d3d10a6d88f0593ebfdc47954",
-  "sig": "7yjlZKeWTGRnMrUeZU7L9ViENmtUlrKFKxrZEsJN3QDzJ93zfEnQC4RTiwmNhb39lSQQZ0ogVg6IZxQ6crtrCQ=="
+  "version": "0.3.7",
+  "notes": "Discord-Button, Neuigkeit in der Musik-Karte, Preise und Sale aus stile-info.php, Online-Funktionen steuern auch die Update-Prüfung.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.7.pack",
+  "sha256": "3b036452d1ae077b85b8619b477226716bbb541510448288ee8b62ea5f70ac7c",
+  "sig": "a5jL/3/WYmgzJd/6TTvl/54Y4dza01HrpjDhES5JhV99AjEIDXH9NNpgmTs/YeztJ89G3jCl3Sqh6t2+dsrnBg=="
 }
