@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutz im Programm – Schattenlicht Stage</title>
 <meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=datenschutz.html">
 <link rel="icon" href="assets/favicon.ico">
 <link rel="stylesheet" href="assets/page.css">
 </head>
@@ -12,75 +13,8 @@
 <div class="wrap">
 <header class="top"><a class="brand" href="./"><span>ᛟ</span>Schattenlicht Stage</a></header>
 <h1>Datenschutz im Programm</h1>
-<p class="sub">Stand: Oktober 2026 · Gilt für das Programm „Schattenlicht Stage“ (Version 0.2.x). Für diese Webseite, die Betatester-Anmeldung und das Fehlerformular gelten die <a href="datenschutz.html">Datenschutzhinweise zur Webseite</a>.</p>
-
-<h2>Das Wichtigste in Kürze</h2>
-<p>Stage läuft auf deinem eigenen PC. Ich (der Entwickler) bekomme aus dem Programm <strong>keine</strong> Daten von dir und von deinen Zuschauern. Es gibt keine Nutzerkonten, keine Statistik, kein Tracking und keine Werbung. Verbindungen zu mir oder meiner Webseite gibt es nur bei den Online-Funktionen (Liste der Stile, Katalog und Einlösen von Codes) und bei der Update-Abfrage (siehe unten). Beides kannst du in den Einstellungen getrennt ausschalten.</p>
-
-<h2>Verantwortlicher</h2>
-<p>Für die Update-Abfrage und für Meldungen, die du mir selbst schickst, ist OG Schattenlicht (Oliver Gabriel) verantwortlich. Die Anschrift und Kontaktangaben stehen im <a href="https://og-schattenlicht.de/impressum">Impressum</a>. Für alles, was Stage auf deinem PC speichert und verarbeitet (insbesondere Daten deiner Zuschauer), bist du selbst verantwortlich, weil du das Programm betreibst. Ich habe darauf keinen Zugriff.</p>
-
-<h2>Was Stage auf deinem PC speichert</h2>
-<p>Alles liegt im Installationsordner von Stage (normalerweise <code>%LocalAppData%\Programs\Schattenlicht Stage</code>). Dort werden gespeichert:</p>
-<ul>
-<li><strong>Einstellungen</strong> (<code>config.json</code>): deine Wahl bei Look, Alerts, Zielen, Sounds und Ähnlichem, dein TikTok-Benutzername und, falls du sie einträgst, das Streamer.bot-Passwort und die Spotify-Client-ID samt Anmelde-Token. Diese Angaben bleiben auf deinem PC und gehen nicht an das Dashboard oder die Overlays.</li>
-<li><strong>Zuschauerdaten</strong> (Ordner <code>data</code>): öffentliche TikTok-Benutzernamen und Anzeigenamen von Zuschauern, die in deinem LIVE aktiv waren, mit Punkten, Coins, Rang, Zahl der Besuche sowie Zeitpunkt des ersten und letzten Besuchs. Sie werden für Begrüßungen, Ränge und Bestenlisten gebraucht.</li>
-<li><strong>Ereignisse im Programm</strong>: Geschenke, Follows, Shares und ähnliche Ereignisse werden angezeigt und an deine Overlays und, wenn du es eingeschaltet hast, an Streamer.bot weitergegeben. Gespeichert werden sie nur im oben genannten Umfang.</li>
-<li><strong>Protokolldatei</strong> (<code>data/stage.log</code>): technische Meldungen und Fehler zur Fehlersuche. Ab 1 MB wird sie ersetzt, sie bleibt also klein.</li>
-<li><strong>Eigene Bilder und Töne</strong> für Alerts (Ordner <code>media</code> und <code>sounds</code>).</li>
-<li><strong>Freischaltungen und Designs</strong> (Ordner <code>data</code>): eine zufällige Geräte-Kennung (<code>device.json</code>), eingelöste Freischaltungen mit ihrer Signatur (<code>unlocks.json</code>), die zuletzt geladene Stil-Liste (<code>styles.json</code>), der zuletzt geladene Katalog mit Vorschaubildern (<code>katalog.json</code> und Ordner <code>katalog</code>) und von dir importierte Design-Pakete (Ordner <code>designs</code>). Design-Pakete werden nur lokal importiert, dabei wird nichts gesendet.</li>
-</ul>
-<p>Zum Löschen kannst du im Ordner <code>data</code> die Zuschauerdaten entfernen oder Stage deinstallieren und den Ordner löschen. Die Zuschauerdaten verlassen deinen PC nicht.</p>
-
-<h2>Hinweis für dich als Streamer</h2>
-<p>Die Namen deiner Zuschauer sind personenbezogene Daten. Da du Stage in deinem LIVE einsetzt, solltest du in deiner eigenen Datenschutzerklärung oder im Impressum deines Kanals erwähnen, dass du Zuschauernamen für Begrüßungen, Ränge und Bestenlisten verarbeitest. Wenn du das Overlay öffentlich auf Stream zeigst, sehen alle Zuschauer diese Namen.</p>
-
-<h2>Verbindungen nach außen</h2>
-<p>Stage verbindet sich nur in den folgenden Fällen mit dem Internet:</p>
-<ul>
-<li><strong>TikTok LIVE:</strong> Um Ereignisse aus deinem LIVE zu empfangen (Chat, Geschenke, Follower und mehr), lädt Stage deine öffentliche LIVE-Seite auf tiktok.com in einem eingebauten, unsichtbaren Fenster, ähnlich wie ein normaler Seitenaufruf. Dabei kann TikTok deine IP-Adresse, technische Daten und den eingegebenen Benutzernamen sehen. Es gilt die Datenschutzerklärung von TikTok. Stage meldet sich dafür <em>nicht</em> bei deinem TikTok-Konto an und sendet keine Chatnachrichten. Das Fenster nutzt ein eigenes Profil und hat nichts mit deinem normalen Browser zu tun. Ein Signatur-Dienst eines Drittanbieters wird in dieser Version nicht verwendet.</li>
-<li><strong>Spotify (nur wenn du es einrichtest):</strong> Für die Anzeige des laufenden Titels kannst du Stage mit deinem Spotify-Konto verbinden. Die Anmeldung läuft direkt über die offizielle Spotify-Schnittstelle mit dem Verfahren „PKCE“, es wird also kein Geheimnis von mir benötigt und kein Server von mir dazwischengeschaltet. Stage fragt nur ab, welcher Titel gerade läuft (Berechtigung „user-read-currently-playing“). Die Client-ID und der Anmelde-Token (Refresh-Token) werden ausschließlich lokal auf deinem PC in der Datei <code>config.json</code> gespeichert, und zwar nicht verschlüsselt. Gib diese Datei deshalb nicht weiter und teile sie nicht in Screenshots oder Support-Anfragen. Du kannst dich jederzeit im Spotify-Bereich des Dashboards mit „Abmelden“ trennen (der Token wird dann gelöscht) und die App-Berechtigung in deinem Spotify-Konto widerrufen. Zwischen Stage und Spotify gilt die Datenschutzerklärung von Spotify. Ohne diese Einrichtung findet keine Verbindung statt.</li>
-<li><strong>Streamer.bot (nur wenn du es einschaltest):</strong> Die Verbindung zu Streamer.bot läuft auf deinem eigenen PC (Adresse 127.0.0.1) und verlässt ihn nicht.</li>
-<li><strong>Online-Funktionen und Update-Abfrage:</strong> Siehe die nächsten Abschnitte.</li>
-</ul>
-<p>Das Dashboard und die Overlays laufen auf einem Server, der nur auf deinem eigenen PC erreichbar ist. Von außen kommt niemand an Stage heran, und Änderungen im Dashboard sind zusätzlich durch ein Sitzungs-Token geschützt.</p>
-
-<h2>Update-Abfrage</h2>
-<p>Stage fragt in regelmäßigen Abständen die Datei <code>update/version.json</code> auf stage.og-schattenlicht.de ab, um neue Versionen zu finden. Die Seite wird über GitHub Pages (GitHub Inc., USA) ausgeliefert. Dabei sieht GitHub technisch bedingt deine IP-Adresse. Ich selbst bekomme davon nichts mit und speichere nichts. Es werden keine weiteren Daten von Stage gesendet. Ein heruntergeladenes Update wird vor der Installation anhand einer digitalen Signatur geprüft. Rechtsgrundlage ist mein berechtigtes Interesse, dir sichere Updates anzubieten (Art. 6 Abs. 1 lit. f DSGVO). Du kannst die Abfrage in den Einstellungen von Stage ausschalten.</p>
-
-<h2>Online-Funktionen: Liste der Stile und Katalog</h2>
-<p>Solange der Schalter „Online-Funktionen“ in den Einstellungen von Stage an ist, fragt Stage kurz nach dem Start und danach alle paar Stunden zwei Dinge ab:</p>
-<ul>
-<li><strong>Liste der Stile:</strong> eine kleine, signierte Liste bei meinem Server (og-schattenlicht.de, Hetzner, Deutschland), welche Stile frei sind und welche einen Freischaltcode brauchen.</li>
-<li><strong>Katalog „Stile entdecken“:</strong> eine signierte Datei mit Namen, Beschreibung, Version, Preis und Lizenztext der Stile sowie kleine Vorschaubilder von stage.og-schattenlicht.de (GitHub Pages, GitHub Inc., USA). Stage lädt die Bilder selbst herunter, prüft sie anhand einer Prüfsumme und zeigt sie aus dem eigenen Zwischenspeicher an. Dein Browser lädt sie also nicht von GitHub.</li>
-</ul>
-<p>Dabei sehen der Hetzner-Server beziehungsweise GitHub technisch bedingt deine IP-Adresse (normales Serverprotokoll). Es werden keine Daten von dir oder deinem Stream gesendet. Der Katalog und die Vorschaubilder werden in deinem Stage-Ordner (Ordner <code>data</code>) zwischengespeichert, damit sie auch ohne Internet angezeigt werden. Rechtsgrundlage ist mein berechtigtes Interesse, die Freischaltung der Stile zu verwalten und dir das Angebot zu zeigen (Art. 6 Abs. 1 lit. f DSGVO). Du kannst alles mit dem Schalter „Online-Funktionen“ ausschalten. Dann fragt Stage dafür nichts im Internet ab, und auch ein Freischaltcode lässt sich erst wieder einlösen, wenn du ihn einschaltest. Der Schalter ist unabhängig von der Update-Abfrage.</p>
-
-<h2>Freischaltcodes</h2>
-<p>Wenn du einen Freischaltcode einlöst (zum Beispiel für ein zusätzliches Design), sendet Stage <strong>nur dann</strong> den eingegebenen Code und eine zufällige Geräte-Kennung an meinen Server bei Hetzner (og-schattenlicht.de, Deutschland). Die Geräte-Kennung wird einmalig zufällig erzeugt, liegt nur auf deinem PC und lässt keinen Rückschluss auf dich zu. Auf dem Server speichere ich eine Prüfsumme des Codes, die Geräte-Kennung und den Zeitpunkt der Einlösung, damit ein Code nur auf einem Gerät gilt. Deine IP-Adresse wird nur zur Missbrauchsbegrenzung als nicht umkehrbares Pseudonym verwendet und nach spätestens 15 Minuten gelöscht. Rechtsgrundlage ist die Durchführung der Freischaltung beziehungsweise mein berechtigtes Interesse, Missbrauch zu verhindern (Art. 6 Abs. 1 lit. b und f DSGVO). Ohne Code findet diese Verbindung nicht statt.</p>
-
-<h2>Fehler melden</h2>
-<p>Die Funktion „Fehler melden“ kopiert eine kurze Diagnose (Version, Windows-Version, letzte Fehler, ohne TikTok-Namen) in die Zwischenablage und öffnet das Meldeformular auf dieser Webseite. Es wird nichts automatisch gesendet. Erst wenn du das Formular selbst abschickst, gelten die <a href="datenschutz.html">Datenschutzhinweise zur Webseite</a>.</p>
-
-<h2>Rechtsgrundlagen im Überblick</h2>
-<ul>
-<li><strong>Freischaltcodes:</strong> Durchführung der Freischaltung und berechtigtes Interesse an der Verhinderung von Missbrauch (Art. 6 Abs. 1 lit. b und f DSGVO).</li>
-<li><strong>Update-Abfrage:</strong> berechtigtes Interesse an sicheren, aktuellen Versionen (Art. 6 Abs. 1 lit. f DSGVO).</li>
-<li><strong>Liste der Stile und Katalog:</strong> berechtigtes Interesse an der Verwaltung der Freischaltungen und an der Darstellung des Angebots (Art. 6 Abs. 1 lit. f DSGVO).</li>
-<li><strong>Fehlermeldungen und Betatester-Anmeldung:</strong> deine Einwilligung beziehungsweise die Durchführung der Beta-Teilnahme (Art. 6 Abs. 1 lit. a und b DSGVO), siehe <a href="datenschutz.html">Datenschutzhinweise zur Webseite</a>.</li>
-<li><strong>Zuschauerdaten auf deinem PC:</strong> Hier entscheidest du als Streamer über Zweck und Mittel. Die Rechtsgrundlage musst du selbst festlegen, in der Regel ist das dein berechtigtes Interesse an einem unterhaltsamen Stream (Art. 6 Abs. 1 lit. f DSGVO).</li>
-</ul>
-
-<h2>Sicherheit</h2>
-<p>Stage ist so gebaut, dass möglichst wenig nach außen geht: Der Server von Stage ist nur von deinem eigenen PC aus erreichbar, ändernde Aufrufe brauchen ein zufälliges Sitzungs-Token, das bei jedem Start neu entsteht, und Updates werden vor der Installation per Signatur geprüft. Das Streamer.bot-Passwort und die Spotify-Anmeldung bleiben in der Konfigurationsdatei auf deinem PC. Sichere und teile diese Datei deshalb nicht. Ein absoluter Schutz ist trotzdem nicht möglich.</p>
-
-<h2>Keine Weitergabe, kein Tracking</h2>
-<p>Stage enthält keine Analyse- oder Werbewerkzeuge, setzt keine Cookies zu Werbezwecken und gibt keine Daten an mich oder Dritte weiter, außer in den oben genannten Fällen.</p>
-
-<h2>Deine Rechte</h2>
-<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch, soweit ich Daten von dir verarbeite. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. Zuschauer, die Auskunft oder Löschung ihrer Daten wünschen, wenden sich bitte an den jeweiligen Streamer, der Stage betreibt.</p>
-
-<footer><a href="./">← Zur Startseite</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="datenschutz.html">Datenschutz Webseite</a> · <a href="melden.html">Fehler melden</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></footer>
+<p>Die Datenschutzerklärung für das Programm und die Webseite steht jetzt gesammelt auf einer Seite: <a href="datenschutz.html">zur Datenschutzerklärung</a>.</p>
+<footer><a href="./">← Zur Startseite</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></footer>
 </div>
 </body>
 </html>
