@@ -1,7 +1,7 @@
 {
-  "version": "0.3.7",
-  "notes": "Discord-Button, Neuigkeit in der Musik-Karte, Preise und Sale aus stile-info.php, Online-Funktionen steuern auch die Update-Prüfung.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.7.pack",
-  "sha256": "3b036452d1ae077b85b8619b477226716bbb541510448288ee8b62ea5f70ac7c",
-  "sig": "a5jL/3/WYmgzJd/6TTvl/54Y4dza01HrpjDhES5JhV99AjEIDXH9NNpgmTs/YeztJ89G3jCl3Sqh6t2+dsrnBg=="
+  "version": "0.3.8",
+  "notes": "Hilfe-Anleitungen für optionale Funktionen (Wasserzeichen, Musik-Karte, Updates, Streamer.bot, Design-Pakete, Stile entdecken).",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.3.8.pack",
+  "sha256": "264327320111350ec0ef7833f7554b94e39d83b1b6f0462a272dfb4297b1eb9f",
+  "sig": "ZIXesGDj1HayYsaKUEzj+BvYrL96VRFzgGhiinnMeALJ0FO2GsMEi3e+dLmC4tb+ogqRcKvHFN3SQUtETWIkBw=="
 }
