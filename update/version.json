@@ -1,7 +1,7 @@
 {
-  "version": "0.3.9",
-  "notes": "Optionale Discord-Live-Nachricht beim Livegang (Webhook, Testknopf, Hilfe).",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.3.9.pack",
-  "sha256": "8ca8fbff99aea47a25b9bb2f1d3f79f0beebaece2c6df90a48aa154f013d39f6",
-  "sig": "X6nE9t/jUWZ+07x80VtIV1jI7AEo8pO18UTcKEuCygZqQyt0JllzLP4rCE8VPHto2CqUBsFQml9209B0inuOCw=="
+  "version": "0.4.0",
+  "notes": "Stile als signierte Pakete (Pay what you want), Diagnose, Einrichtungsassistent, Backup und Wiederherstellung.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.4.0.pack",
+  "sha256": "8e0c8534f1040769a532dee157ea47be058fbf6bfc9bad482d87541cb19dd906",
+  "sig": "N2QdSdD/0b1oV6nr4bl1sbDTg0243C8arLdM7LwaRrWbGVH9d1WJ8tnS6BDYcCguK56i6YpQYAusIOb0KMJrCA=="
 }
