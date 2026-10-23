@@ -1,7 +1,7 @@
 {
-  "version": "0.4.0",
-  "notes": "Stile als signierte Pakete (Pay what you want), Diagnose, Einrichtungsassistent, Backup und Wiederherstellung.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.4.0.pack",
-  "sha256": "8e0c8534f1040769a532dee157ea47be058fbf6bfc9bad482d87541cb19dd906",
-  "sig": "N2QdSdD/0b1oV6nr4bl1sbDTg0243C8arLdM7LwaRrWbGVH9d1WJ8tnS6BDYcCguK56i6YpQYAusIOb0KMJrCA=="
+  "version": "0.4.1",
+  "notes": "Sicherer Speichern, Alert-Warteschlange, Ziel-Meilensteine, Neu verbinden, neue Oberfläche, Backup mit Auswahl, Filter bei den Meldungen.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.4.1.pack",
+  "sha256": "e31be617e3f5f1448413f71df1a4e39c4b82ebccf045afb205d05fb88363034e",
+  "sig": "UXOtzP/nZxvpOvxCCmwS+xLPTArSI2uyHLIjehwcOhOV0/lOrygmHveOh4j4DOhqDH6BvfgFoss6s8u8FKiEAQ=="
 }
