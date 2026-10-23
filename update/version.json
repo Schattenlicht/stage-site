@@ -1,7 +1,7 @@
 {
-  "version": "0.4.1",
-  "notes": "Sicherer Speichern, Alert-Warteschlange, Ziel-Meilensteine, Neu verbinden, neue Oberfläche, Backup mit Auswahl, Filter bei den Meldungen.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.4.1.pack",
-  "sha256": "e31be617e3f5f1448413f71df1a4e39c4b82ebccf045afb205d05fb88363034e",
-  "sig": "UXOtzP/nZxvpOvxCCmwS+xLPTArSI2uyHLIjehwcOhOV0/lOrygmHveOh4j4DOhqDH6BvfgFoss6s8u8FKiEAQ=="
+  "version": "0.4.2",
+  "notes": "Stabilere TikTok-Verbindung (Absturz, Ruhezustand, Wartezeiten), ruhigeres Protokoll.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.4.2.pack",
+  "sha256": "dde037fa19eb38b670f6a353057d2cdf86058d7f27f05aeafc3c77fb7b29b42c",
+  "sig": "FS9wy3WZy4iw00AfZ6feAQj9Xxv4yYeHzJatxtLYR+mTll1bjWNN2d/jnjrZ/BteMXRqlLsn5oFoe+TcOtV5AQ=="
 }
