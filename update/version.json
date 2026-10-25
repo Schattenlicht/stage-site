@@ -1,7 +1,7 @@
 {
-  "version": "0.4.3",
-  "notes": "Neuer Look in Obsidian und Graphit, Bühne mit Live-Vorschau und Live-Ansicht auf der Übersicht, Ereignis-Composer bei den Alerts, Stimmungen mit Vorschau, besserer Overlay-Editor bei kleineren Fenstern, eigene Rückfrage-Fenster, Streamer.bot für neue Installationen aus.",
-  "url": "https://stage.og-schattenlicht.de/download/app-0.4.3.pack",
-  "sha256": "f03a81702a5ec98fe47b4e3390780d0dd2398d6fcb3015db741f4046cd2c0898",
-  "sig": "Qi/W3ntKvL4R8NgUetnJaaciQ514e0y87M0HXt0JB9Yo8cAFn4q8TSUSYYkgXV+gRi1ZbMXy8e+qErW2a361Aw=="
+  "version": "0.4.4",
+  "notes": "Regie-Modus für die Overlays. Neue Schlüssel für Updates, Pakete und Katalog.",
+  "url": "https://stage.og-schattenlicht.de/download/app-0.4.4.pack",
+  "sha256": "d70ba2b013de5556d659273858ad9484f31f0371581ec1ac5bb79c54e02042a1",
+  "sig": "EPH8w6b5w8oOmVGBm8bVAXP9/rPgLI9ZCIAxQoDd6eL7WZzNhCfjUMsnw+hKb7zx81q59TAXsSM1Q6zV7X32Dw=="
 }
