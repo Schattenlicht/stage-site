@@ -1,0 +1,17 @@
+# Schattenlicht Stage
+
+> Kostenloses Desktop-Hilfsprogramm für TikTok LIVE Stream-Overlays und Alerts.
+
+## Übersicht
+- Name: Schattenlicht Stage
+- Entwickler: Oliver Gabriel (OG Schattenlicht)
+- Plattform: Windows Desktop
+- Lizenz/Preis: Kostenlos
+- Zweck: Steuerung von Overlays, Alerts und visueller Atmosphäre für TikTok LIVE Streams (9:16 Format) ohne externe Cloud-Plattform-Logins.
+- Rechtlicher Hinweis: Unabhängiges Hilfsprogramm, keine offizielle Verbindung zu TikTok oder ByteDance.
+
+## Wichtige Links
+- Download & Startseite: https://stage.og-schattenlicht.de/
+- Nutzungsbedingungen: https://stage.og-schattenlicht.de/nutzungsbedingungen.html
+- Datenschutz: https://stage.og-schattenlicht.de/datenschutz.html
+- Entwickler-Website: https://og-schattenlicht.de/
