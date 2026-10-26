@@ -5,84 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Schattenlicht Stage – Overlays und Alerts für dein LIVE</title>
 <meta name="description" content="Schattenlicht Stage: kostenloses Regiepult für Alerts, Ziele, Regie-Modus und über 20 Stile im Hochformat. Läuft lokal auf deinem PC, ohne Konto.">
+<meta name="theme-color" content="#0A0A0F">
 <link rel="icon" href="assets/favicon.ico">
-<style>
-:root{--bg:#10162a;--bg2:#161d33;--card:#1b2340;--line:#2b3556;--text:#e7ebf5;--mute:#98a3bf;--gold:#e8b84a;--gold2:#f6d27a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#26305a 0%,transparent 60%),var(--bg);color:var(--text);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
-a{color:var(--gold2)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{font-weight:700;letter-spacing:.2px;color:var(--gold);font-size:19px;text-decoration:none}
-.brand span{opacity:.8;margin-right:6px}
-nav a{color:var(--mute);text-decoration:none;margin-left:18px;font-size:15px}
-nav a:hover{color:var(--text)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:34px 0 56px}
-h1{font-size:clamp(34px,5.2vw,54px);line-height:1.08;margin:0 0 16px;letter-spacing:-.5px}
-h1 em{font-style:normal;color:var(--gold)}
-.lead{color:#c3cce2;font-size:19px;margin:0 0 26px;max-width:34em}
-.cta{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1405;font-weight:700;text-decoration:none;font-size:18px;box-shadow:0 8px 28px rgba(232,184,74,.28)}
-.cta:hover{filter:brightness(1.06)}
-.meta{margin-top:14px;color:var(--mute);font-size:14px}
-.meta code{background:#0d1224;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:12.5px;word-break:break-all}
-details.sum{margin-top:8px}details.sum summary{cursor:pointer;color:var(--mute)}details.sum summary:hover{color:var(--text)}details.sum code{display:inline-block;margin-top:6px}
-.phones{display:flex;gap:14px;justify-content:center;align-items:flex-end}
-.phones img{width:31%;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.5);display:block}
-.phones img:nth-child(2){width:36%;transform:translateY(-14px)}
-section{padding:44px 0;border-top:1px solid var(--line)}
-h2{font-size:28px;margin:0 0 8px;color:var(--gold)}
-.sub{color:var(--mute);margin:0 0 26px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.card h3{margin:0 0 6px;font-size:18px}
-.card p{margin:0;color:#b9c3dc;font-size:15.5px}
-.shotcap{font-size:13.5px;color:var(--mute);margin:8px 0 0;text-align:center}
-.shot{width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.45);display:block}
-ol.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
-ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-ol.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#1a1405;font-weight:700;display:grid;place-items:center}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gal figure{margin:0}.gal img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;aspect-ratio:680/260;object-fit:cover}.gal figcaption{font-size:13.5px;color:var(--mute);margin-top:5px;text-align:center}
-.support{text-align:center}.support .cta+.cta{margin-left:10px}.cta-soft{background:linear-gradient(180deg,#2a3560,#222b4d);color:var(--gold2);border:1px solid var(--gold);box-shadow:none}.cta-soft:hover{background:linear-gradient(180deg,#34406f,#2a3560)}
-.note{background:#17203a;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;color:#c3cce2;font-size:15.5px}
-footer{padding:34px 0 50px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
-footer p{margin:6px 0}
-@media(max-width:560px){nav{display:none}.brand{white-space:nowrap}}
-@media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr)}.support .cta+.cta{margin:12px 0 0}.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}nav a{margin-left:12px}.phones{margin-top:8px}}
-</style>
+<link rel="preload" href="assets/fonts/PlayfairDisplay-400.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/brand.css">
+<link rel="stylesheet" href="assets/stage.css">
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="brand" href="#"><span>ᛟ</span>Schattenlicht Stage</a>
-<nav><a href="#funktionen">Funktionen</a><a href="#start">Loslegen</a><a href="beta.html">Beta</a></nav></header>
+<header class="kopf"><a class="marke" href="./"><img src="assets/logo-sl.webp" width="34" height="37" alt="">Schattenlicht Stage</a>
+<nav aria-label="Seiten"><a href="#funktionen">Funktionen</a><a href="#start">Loslegen</a><a href="beta.html">Beta</a></nav></header>
 
 <div class="hero">
  <div>
-  <h1>Dein LIVE.<br><em>Deine Bühne.</em></h1>
+  <h1>Dein LIVE.<span>Deine Bühne.</span></h1>
   <p class="lead">Schattenlicht Stage bringt Alerts, Ziele, Abstimmungen und Musik als Overlay im Hochformat in dein TikTok LIVE. Kostenlos, lokal auf deinem PC, ohne Konto.</p>
-  <a class="cta" id="download" href="beta.html">Betatester werden</a>
-  <div class="meta">Stage ist in der Beta · Windows 10/11 · kostenlos<br>Trag dich ein, du bekommst den Download-Link per E-Mail.</div>
+  <div class="hero-cta">
+   <a class="btn btn-glut" id="download" href="beta.html">Betatester werden</a>
+   <p class="meta">In der Beta · Windows 10/11 · kostenlos<br>Trag dich ein, du bekommst den Download-Link per E-Mail.</p>
+  </div>
  </div>
- <div class="phones" aria-label="Beispiel-Looks">
-  <img src="assets/arcade.jpg" alt="Look Arcade mit Geschenk-Alert" loading="lazy">
-  <img src="assets/paintball.jpg" alt="Look Paintball mit Farbspritzern" loading="lazy">
-  <img src="assets/glut.jpg" alt="Look Glut mit Geschenk-Alert" loading="lazy">
+ <div class="buehne" aria-label="Beispiel-Looks">
+  <img src="assets/arcade.jpg" alt="Look Arcade mit Geschenk-Alert" width="540" height="960">
+  <img src="assets/paintball.jpg" alt="Look Paintball mit Farbspritzern" width="540" height="960">
+  <img src="assets/glut.jpg" alt="Look Glut mit Geschenk-Alert" width="540" height="960">
  </div>
 </div>
 
 <section id="funktionen">
  <h2>Was Stage kann</h2>
  <p class="sub">Alles in einem Regiepult, gebaut für 1080 × 1920.</p>
- <div class="grid">
-  <div class="card"><h3>Alerts nach Maß</h3><p>Geschenke, Follows, Shares, Abos und Willkommen: gemeinsam oder in eigenen Boxen, mit Stufen nach Coin-Wert.</p></div>
-  <div class="card"><h3>Ziele &amp; Abstimmungen</h3><p>Follower- und Like-Ziele, Chat-Abstimmungen und Befehle, die deine Zuschauer selbst auslösen.</p></div>
-  <div class="card"><h3>Regie-Modus</h3><p>Blendet alles Nebensächliche aus und zeigt nur die Bühne, damit du dich beim Streamen auf das Wesentliche konzentrierst.</p></div>
-  <div class="card"><h3>Über 20 Stile</h3><p>Sieben sind kostenlos, weitere Design-Pakete folgen. Pakete bringen Farben, Bilder und Atmosphäre mit, werden beim Import geprüft und enthalten keinen Programmcode. Eigene Stile speicherst du als Slots.</p></div>
-  <div class="card"><h3>Streamer.bot</h3><p>Jedes Ereignis kann eine Aktion in Streamer.bot auslösen, mit allen Daten als Argumente.</p></div>
-  <div class="card"><h3>Musik &amp; Info-Fenster</h3><p>„Es läuft“-Anzeige für Spotify und wechselnde Info-Fenster für deine Kanal-Infos.</p></div>
-  <div class="card"><h3>Discord-Live-Nachricht</h3><p>Optional: Stage meldet deinen Livegang in deinem Discord-Kanal. Standardmäßig aus, mit deinem eigenen Webhook.</p></div>
-  <div class="card"><h3>Leicht einzurichten</h3><p>Ein Einrichtungsassistent führt dich durch den Start. Bei Problemen hilft die Diagnose, und ein Backup sichert deine Einstellungen.</p></div>
-  <div class="card"><h3>Lokal &amp; datensparsam</h3><p>Läuft auf deinem PC. Kein Konto, keine Cloud, keine Datensammlung. Nur was du einschaltest, geht ins Internet: die Verbindung zu TikTok, optional Spotify, Discord und Updates. Updates, Stile und Pakete sind signiert und werden vor der Nutzung geprüft.</p></div>
+ <div class="funktionen">
+  <div><h3>Alerts nach Maß</h3><p>Geschenke, Follows, Shares, Abos und Willkommen: gemeinsam oder in eigenen Boxen, mit Stufen nach Coin-Wert.</p></div>
+  <div><h3>Ziele &amp; Abstimmungen</h3><p>Follower- und Like-Ziele, Chat-Abstimmungen und Befehle, die deine Zuschauer selbst auslösen.</p></div>
+  <div><h3>Regie-Modus</h3><p>Blendet alles Nebensächliche aus und zeigt nur die Bühne, damit du dich beim Streamen auf das Wesentliche konzentrierst.</p></div>
+  <div><h3>Über 20 Stile</h3><p>Sieben sind kostenlos, weitere Design-Pakete folgen. Pakete bringen Farben, Bilder und Atmosphäre mit, werden beim Import geprüft und enthalten keinen Programmcode. Eigene Stile speicherst du als Slots.</p></div>
+  <div><h3>Streamer.bot</h3><p>Jedes Ereignis kann eine Aktion in Streamer.bot auslösen, mit allen Daten als Argumente.</p></div>
+  <div><h3>Musik &amp; Info-Fenster</h3><p>„Es läuft“-Anzeige für Spotify und wechselnde Info-Fenster für deine Kanal-Infos.</p></div>
+  <div><h3>Discord-Live-Nachricht</h3><p>Optional: Stage meldet deinen Livegang in deinem Discord-Kanal. Standardmäßig aus, mit deinem eigenen Webhook.</p></div>
+  <div><h3>Leicht einzurichten</h3><p>Ein Einrichtungsassistent führt dich durch den Start. Bei Problemen hilft die Diagnose, und ein Backup sichert deine Einstellungen.</p></div>
+  <div><h3>Lokal &amp; datensparsam</h3><p>Läuft auf deinem PC. Kein Konto, keine Cloud, keine Datensammlung. Nur was du einschaltest, geht ins Internet: die Verbindung zu TikTok, optional Spotify, Discord und Updates. Updates, Stile und Pakete sind signiert und werden vor der Nutzung geprüft.</p></div>
  </div>
 </section>
 
@@ -104,7 +66,7 @@ footer p{margin:6px 0}
 <section>
  <h2>Das Regiepult</h2>
  <p class="sub">Die Übersicht zeigt deine Bühne live, mit Regie-Modus, Test-Alert und Stil-Wechsel. Elemente verschiebst und stellst du im Reiter „Overlays“ ein: Form, Farben, Texte und Links.</p>
- <img class="shot" src="assets/dashboard.jpg" alt="Das Dashboard von Schattenlicht Stage (Beispielansicht)" loading="lazy">
+ <img class="shot" src="assets/dashboard.jpg" alt="Das Dashboard von Schattenlicht Stage (Beispielansicht)" width="1800" height="1056" loading="lazy">
  <p class="shotcap">Beispielansicht mit Beispieldaten, kein echter Stream.</p>
 </section>
 
@@ -117,18 +79,19 @@ footer p{margin:6px 0}
   <li><div><b>Szene einbinden.</b> Den Szene-Link kopieren und in TikTok LIVE Studio als Browserquelle (1080 × 1920) einfügen.</div></li>
   <li><div><b>Testen und live gehen.</b> Mit dem Test-Center einen Alert ansehen. Sobald du live bist, verbindet sich Stage selbst.</div></li>
  </ol>
- <p></p>
  <div class="note"><b>Windows-Hinweis:</b> Neue Programme ohne Code-Signing-Zertifikat zeigen „Der Computer wurde durch Windows geschützt“. Dann auf „Weitere Informationen“ und „Trotzdem ausführen“ klicken. Die Prüfsumme zum Vergleichen steht in der E-Mail mit dem Download-Link.</div>
 </section>
 
 <section class="support">
  <h2>Gefällt dir Stage?</h2>
  <p class="sub">Stage ist kostenlos und entsteht neben meinem Alltag. Wenn du magst, hilfst du mit einem Kaffee, dass es weitergeht. Fragen und Ideen kannst du auch in unserer Community loswerden.</p>
- <a class="cta cta-soft" href="https://ko-fi.com/ogschattenlicht" target="_blank" rel="noopener">♥ Stage unterstützen (Ko-fi)</a>
- <a class="cta cta-soft" href="https://discord.gg/SR7VnZw9hM" target="_blank" rel="noopener">Zur Community auf Discord</a>
+ <div class="support-btns">
+  <a class="btn btn-leise" href="https://ko-fi.com/ogschattenlicht" target="_blank" rel="noopener">♥ Stage unterstützen (Ko-fi)</a>
+  <a class="btn btn-leise" href="https://discord.gg/SR7VnZw9hM" target="_blank" rel="noopener">Zur Community auf Discord</a>
+ </div>
 </section>
 
-<footer>
+<footer class="fuss">
  <p>Schattenlicht Stage ist ein unabhängiges Hilfsprogramm und steht in keiner Verbindung zu TikTok oder ByteDance. Es ist kein Partner, Produkt oder Dienst von TikTok und wird von TikTok weder unterstützt noch autorisiert. „TikTok“ ist eine Marke der jeweiligen Inhaber.</p>
  <p>Entwickelt von OG Schattenlicht · <a href="https://ko-fi.com/ogschattenlicht">Stage unterstützen (Ko-fi)</a> · <a href="https://og-schattenlicht.de">og-schattenlicht.de</a> · <a href="https://discord.gg/SR7VnZw9hM" target="_blank" rel="noopener">Discord</a> · <a href="beta.html">Betatester werden</a> · <a href="melden.html">Fehler melden</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="programm-datenschutz.html">Datenschutz im Programm</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="https://og-schattenlicht.de/impressum">Impressum</a></p>
 </footer>

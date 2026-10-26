@@ -1,0 +1,4 @@
+Playfair Display, Crimson Pro und DM Mono stehen unter der SIL Open Font License 1.1
+(https://openfontlicense.org). Bezogen von Google Fonts (https://fonts.google.com).
+Urheber: Claus Eggers Sørensen (Playfair Display), Jacques Le Bailly (Crimson Pro),
+Colophon Foundry (DM Mono).
