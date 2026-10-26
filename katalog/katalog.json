@@ -1,6 +1,6 @@
 {
  "format": 1,
- "stand": "2026-10-25T16:40:37Z",
+ "stand": "2026-10-26T05:45:25Z",
  "items": [
   {
    "id": "clean",
@@ -115,7 +115,7 @@
    "kurz": "Grüne Terminal-Schrift",
    "beschreibung": "Monitor-Grün auf Schwarz mit Terminal-Schrift, wie ein alter Computer.",
    "lizenz": "Digitaler Stil als ZIP-Paket von OG Schattenlicht. Ein Code gilt für bis zu zwei Geräte.",
-   "version": "1.0",
+   "version": "1.1",
    "preis_cent": 399,
    "kaufen_url": "",
    "passt_zu": "",
@@ -408,5 +408,5 @@
    "vorschau_sha256": "e4ed9c1e3d90117ab2a4610616cf3e95f03c71dacfc997bb8c098e3fec5e12b9"
   }
  ],
- "sig": "XjLBeXZeZqxVixvlZwKdJxdKu6So1Ktzw/ApKo7ZtvxFn0dIiaNJNQf1ROCy8YSXIQeh9jm4wqjocrWhQDl+AQ=="
+ "sig": "n9pgi7IWAR5xIlIq+IN/AkOgvQgei6cXXwx/kKKeq/IkCR2GAxFlpzmslSfhhJAil6K9mTyQdaVgsWbWOuJqCg=="
 }
