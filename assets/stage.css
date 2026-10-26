@@ -1,0 +1,60 @@
+/* Startseite von Schattenlicht Stage (nutzt brand.css) */
+
+/* ── Hero: die Bühne wird von oben angeleuchtet ───────── */
+.hero{display:grid;grid-template-columns:1fr;gap:var(--luft,32px);align-items:center;padding:24px 0 56px}
+.hero h1{font-size:clamp(2.7rem,10vw,4.2rem);line-height:1.05}
+.hero h1 span{display:block;color:var(--alchemie)}
+.lead{color:var(--asche-dim);font-size:1.25rem;line-height:1.65;max-width:34em;margin:20px 0 28px}
+.hero-cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.meta{color:var(--asche-dim);font-size:1rem;margin:0}
+
+.buehne{position:relative;display:flex;gap:14px;justify-content:center;align-items:flex-end;padding:36px 8px 8px}
+.buehne::before{content:"";position:absolute;inset:-6% -4% 0;background:
+  radial-gradient(ellipse 60% 70% at 50% 0%,rgba(200,168,75,.34),transparent 70%),
+  radial-gradient(ellipse 70% 45% at 50% 100%,var(--glut-glow),transparent 75%);
+  animation:licht 2.2s ease-out both;pointer-events:none}
+.buehne img{position:relative;width:31%;height:auto;border-radius:18px;border:1px solid var(--linie);box-shadow:0 22px 60px rgba(0,0,0,.6);display:block}
+.buehne img:nth-child(2){width:37%;transform:translateY(-18px);border-color:var(--alchemie-tief)}
+@keyframes licht{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+
+/* ── Abschnitte ─────────────────────────────────────── */
+section{padding:56px 0 8px;border-top:1px solid var(--linie);margin-top:40px}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:12px;max-width:20ch}
+.sub{color:var(--asche-dim);margin:0 0 32px;max-width:60ch}
+
+/* Funktionen: Einträge mit Goldlinie statt Karten */
+.funktionen{display:grid;gap:30px 40px;grid-template-columns:1fr}
+.funktionen div{border-top:2px solid var(--alchemie-tief);padding-top:16px}
+.funktionen h3{font-size:1.4rem;margin-bottom:8px}
+.funktionen p{margin:0;color:var(--asche-dim);line-height:1.6;max-width:36em}
+
+/* Stile-Galerie */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gal figure{margin:0}
+.gal img{width:100%;border-radius:6px;border:1px solid var(--linie);display:block;aspect-ratio:680/260;object-fit:cover}
+.gal figcaption{font-size:1rem;color:var(--asche-dim);margin-top:6px}
+
+/* Regiepult-Bild */
+.shot{width:100%;border-radius:8px;border:1px solid var(--alchemie-tief);box-shadow:0 24px 70px rgba(0,0,0,.6);display:block}
+.shotcap{font-size:.95rem;color:var(--asche-dim);margin:10px 0 0}
+
+/* Schritte: eine echte Reihenfolge, daher nummeriert */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s;border-top:1px solid var(--linie)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--linie)}
+.steps li::before{content:counter(s);font:400 2.4rem/1 var(--display);color:var(--alchemie)}
+.steps b{font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--asche)}
+.note{margin-top:28px;padding:16px 18px;background:var(--panel);border-left:3px solid var(--alchemie);border-radius:0 6px 6px 0;color:var(--asche-dim);font-size:1.02rem;max-width:70ch}
+.note b{color:var(--asche)}
+
+/* Unterstützen */
+.support p.sub{max-width:56ch}
+.support-btns{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+
+@media(min-width:900px){
+  .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;min-height:min(86vh,760px)}
+  .funktionen{grid-template-columns:repeat(3,1fr)}
+  .gal{grid-template-columns:repeat(4,1fr)}
+  .hero-cta{flex-direction:row;align-items:center;flex-wrap:wrap;gap:20px}
+  .support-btns{flex-direction:row}
+}
+@media(prefers-reduced-motion:reduce){.buehne::before{animation:none}}

@@ -1,0 +1,46 @@
+/* Gemeinsames Gerüst von og-schattenlicht.de und Schattenlicht Stage (Farben, Schriften, Grundstil).
+   Schriften liegen lokal (SIL OFL, siehe fonts/LICENSE.txt): kein Abruf bei Google (DSGVO). */
+@font-face{font-family:"Crimson Pro";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/CrimsonPro-400.ttf") format("truetype")}
+@font-face{font-family:"Crimson Pro";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/CrimsonPro-400i.ttf") format("truetype")}
+@font-face{font-family:"Crimson Pro";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/CrimsonPro-600.ttf") format("truetype")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/PlayfairDisplay-400.ttf") format("truetype")}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/PlayfairDisplay-400i.ttf") format("truetype")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/PlayfairDisplay-600.ttf") format("truetype")}
+
+:root{
+  --abgrund:#0A0A0F;--abgrund-warm:#14141C;--panel:#1A1A24;--panel-hover:#292938;
+  --glut:#B84A2A;--glut-hell:#CC5A38;--glut-glow:rgba(184,74,42,.22);
+  --alchemie:#C8A84B;--alchemie-tief:#8B6914;--alchemie-glow:rgba(200,168,75,.2);
+  --asche:#E8E4DC;--asche-dim:#B8B2A6;--asche-stumm:#7A756A;
+  --linie:rgba(232,228,220,.15);
+  --display:"Playfair Display",Georgia,serif;--ui:"Crimson Pro",Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;color-scheme:dark}
+body{margin:0;background:var(--abgrund);color:var(--asche);font:1.125rem/1.65 var(--ui);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--alchemie);text-underline-offset:3px}
+a:hover{color:var(--asche)}
+:focus-visible{outline:2px solid var(--alchemie);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;margin:0;color:var(--asche)}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Knöpfe */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.6em;border-radius:6px;border:1px solid transparent;font:600 1.05rem var(--ui);text-decoration:none;cursor:pointer;transition:transform .18s,background .18s,border-color .18s}
+.btn-glut{background:var(--glut);color:var(--asche);box-shadow:0 8px 28px var(--glut-glow)}
+.btn-glut:hover{background:var(--glut-hell);color:var(--asche);transform:translateY(-1px)}
+.btn-leise{background:var(--panel);color:var(--asche);border-color:var(--alchemie-tief)}
+.btn-leise:hover{background:var(--panel-hover);border-color:var(--alchemie);color:var(--asche)}
+
+/* Kopf und Fuß */
+.kopf{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.marke{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--asche);font:400 1.25rem var(--display)}
+.marke img{width:34px;height:auto;display:block}
+.marke:hover{color:var(--alchemie)}
+.kopf nav a{color:var(--asche-dim);text-decoration:none;margin-left:22px;font-size:1.02rem;display:inline-flex;min-height:44px;align-items:center}
+.kopf nav a:hover{color:var(--alchemie)}
+.fuss{margin-top:48px;padding:32px 0 56px;border-top:1px solid var(--linie);color:var(--asche-dim);font-size:.95rem}
+.fuss p{margin:8px 0;max-width:75ch}
+.fuss a{color:var(--asche-dim)}.fuss a:hover{color:var(--alchemie)}
+@media(max-width:560px){.kopf nav{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
